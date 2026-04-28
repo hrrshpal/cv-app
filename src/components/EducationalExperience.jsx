@@ -27,7 +27,21 @@ const EducationalExperience = () => {
 
 const EducationSection = () => {
 
-    function handleChange(){}
+    const [info, setInfo] = useState({
+        degree: '',
+        school: '',
+        city: '',
+        startdate: '',
+        enddate: '',
+        description:''
+    })
+
+    function handleChange(e){
+        const {name, value} = e.target
+        const newObj = {...info}
+        newObj[name] = value
+        setInfo(newObj)
+    }
 
     return <>
         <div>

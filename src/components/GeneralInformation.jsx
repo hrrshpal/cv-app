@@ -14,9 +14,10 @@ const GeneralInformation = () => {
     function handleChange(e){
         const {name, value} = e.target
         const newObj = {...info}
-        newObj.name = value
+        newObj[name] = value
         setInfo(newObj)
     }
+
     
   return (
     <>
