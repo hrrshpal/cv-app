@@ -45,9 +45,9 @@ const EducationSection = () => {
 
     return <>
         <div>
-            <input onChange={handleChange} name="degree" required type="text" className="degree" placeholder='e.g. Bachelor of Computer Applications'/>
-            <input onChange={handleChange} name="school" required type="text" className="school" placeholder='e.g. Delhi University' />
-            <input onChange={handleChange} name="city" required type="text" className="city" placeholder='e.g. New Delhi' />
+            <input onChange={handleChange} name="degree" required type="text" className="degree" placeholder='Degree'/>
+            <input onChange={handleChange} name="school" required type="text" className="school" placeholder='School/University' />
+            <input onChange={handleChange} name="city" required type="text" className="city" placeholder='City/Town' />
             <input onChange={handleChange} name="startdate" type="date" className="startdate" />
             <input onChange={handleChange} name="enddate" type="date" className="enddate" />
             <textarea onChange={handleChange} name="description" type="textarea" className="description" placeholder='Description (Optional)' />

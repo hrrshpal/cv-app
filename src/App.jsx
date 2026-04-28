@@ -12,8 +12,8 @@ function App() {
     <>
       <h1>CV Builder</h1>
       <GeneralInformation />
-      <EducationalExperience />
       <Experience />
+      <EducationalExperience />
       <Skills />
     </>
   )
