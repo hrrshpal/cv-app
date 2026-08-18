@@ -1,0 +1,260 @@
+/* =========================================
+   WORK EXPERIENCE
+   ========================================= */
+
+.experience-section {
+    width: 100%;
+}
+
+.experience-section h2 {
+    margin: 8px 0 12px;
+
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+
+    color: #242424;
+}
+
+
+/* =========================================
+   EXPERIENCE LIST
+   ========================================= */
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* =========================================
+   EXPERIENCE CARD
+   ========================================= */
+
+.experience-card {
+    width: 100%;
+
+    padding: 18px;
+
+    background: #f8f6f2;
+
+    border: 1px solid #d8d3cb;
+    border-radius: 6px;
+
+    box-shadow:
+        0 3px 10px rgba(40, 35, 30, 0.04);
+}
+
+
+/* =========================================
+   CARD HEADER
+   ========================================= */
+
+.experience-card-header {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #ded8d0;
+}
+
+.experience-card-header span {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #b56b45;
+}
+
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+.experience-card input,
+.experience-card textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    margin-bottom: 10px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+
+    color: #252525;
+    background: #fffdf9;
+
+    border: 1px solid #d6d0c8;
+    border-radius: 4px;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+   ========================================= */
+
+.experience-card input::placeholder,
+.experience-card textarea::placeholder {
+    color: #99938b;
+}
+
+
+/* =========================================
+   FOCUS
+   ========================================= */
+
+.experience-card input:focus,
+.experience-card textarea:focus {
+    background: #ffffff;
+
+    border-color: #b56b45;
+
+    box-shadow:
+        0 0 0 3px rgba(181, 107, 69, 0.09);
+}
+
+
+/* =========================================
+   DATE ROW
+   ========================================= */
+
+.date-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.date-row input {
+    min-width: 0;
+}
+
+
+/* =========================================
+   TEXTAREA
+   ========================================= */
+
+.experience-card textarea {
+    min-height: 105px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.section-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   ADD
+   ========================================= */
+
+.add-button,
+.delete-button {
+    padding: 9px 14px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.add-button {
+    color: #ffffff;
+
+    background: #b56b45;
+
+    border: 1px solid #b56b45;
+}
+
+.add-button:hover {
+    background: #9e5937;
+
+    border-color: #9e5937;
+}
+
+
+/* =========================================
+   DELETE
+   ========================================= */
+
+.delete-button {
+    color: #55514c;
+
+    background: transparent;
+
+    border: 1px solid #c9c2b9;
+}
+
+.delete-button:hover {
+    background: #e8e2da;
+
+    border-color: #aaa198;
+}
+
+
+/* =========================================
+   CLICK
+   ========================================= */
+
+.add-button:active,
+.delete-button:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .experience-card {
+        padding: 15px;
+    }
+
+    .date-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .section-buttons {
+        flex-wrap: wrap;
+    }
+}

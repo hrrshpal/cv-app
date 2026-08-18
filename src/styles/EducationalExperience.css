@@ -1,0 +1,227 @@
+/* =========================================
+   EDUCATION
+   ========================================= */
+
+.education-section {
+    width: 100%;
+}
+
+.education-section h2 {
+    margin: 8px 0 12px;
+
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+
+    color: #242424;
+}
+
+
+/* =========================================
+   LIST
+   ========================================= */
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.education-card {
+    width: 100%;
+
+    padding: 18px;
+
+    background: #f8f6f2;
+
+    border: 1px solid #d8d3cb;
+    border-radius: 6px;
+
+    box-shadow:
+        0 3px 10px rgba(40, 35, 30, 0.04);
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.education-card-header {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #ded8d0;
+}
+
+.education-card-header span {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #b56b45;
+}
+
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+.education-card input,
+.education-card textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    margin-bottom: 10px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+
+    color: #252525;
+    background: #fffdf9;
+
+    border: 1px solid #d6d0c8;
+    border-radius: 4px;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+}
+
+.education-card input::placeholder,
+.education-card textarea::placeholder {
+    color: #99938b;
+}
+
+.education-card input:focus,
+.education-card textarea:focus {
+    background: #ffffff;
+
+    border-color: #b56b45;
+
+    box-shadow:
+        0 0 0 3px rgba(181, 107, 69, 0.09);
+}
+
+
+/* =========================================
+   DATES
+   ========================================= */
+
+.education-card .date-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.education-card textarea {
+    min-height: 105px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.education-section .section-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.education-section .add-button,
+.education-section .delete-button {
+    padding: 9px 14px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.education-section .add-button {
+    color: #ffffff;
+
+    background: #b56b45;
+
+    border: 1px solid #b56b45;
+}
+
+.education-section .add-button:hover {
+    background: #9e5937;
+
+    border-color: #9e5937;
+}
+
+.education-section .delete-button {
+    color: #55514c;
+
+    background: transparent;
+
+    border: 1px solid #c9c2b9;
+}
+
+.education-section .delete-button:hover {
+    background: #e8e2da;
+
+    border-color: #aaa198;
+}
+
+.education-section button:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .education-card {
+        padding: 15px;
+    }
+
+    .education-card .date-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

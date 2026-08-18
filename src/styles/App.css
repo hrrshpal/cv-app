@@ -1,0 +1,276 @@
+/* =========================================
+   GLOBAL
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  background: #eeeae4;
+  color: #202020;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+
+body > #root > h1 {
+  position: relative;
+
+  margin: 0;
+  padding: 25px 5vw 22px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  color: #171717;
+  background: #f8f6f2;
+
+  border-bottom: 1px solid #d8d3cb;
+}
+
+body > #root > h1::after {
+  content: "";
+
+  display: block;
+
+  width: 50px;
+  height: 4px;
+
+  margin-top: 10px;
+
+  background: #b56b45;
+
+  border-radius: 2px;
+}
+
+
+/* =========================================
+   MAIN APP LAYOUT
+   ========================================= */
+
+.app {
+  display: grid;
+
+  /*
+    Left  = editor
+    Right = A4 resume
+  */
+
+  grid-template-columns: 430px 794px;
+
+  justify-content: center;
+  align-items: start;
+
+  gap: 45px;
+
+  min-height: calc(100vh - 105px);
+
+  padding: 30px 25px 40px;
+}
+
+
+/* =========================================
+   SIDEBAR / EDITOR
+   ========================================= */
+
+.sidebar {
+  width: 430px;
+
+  /*
+    Sidebar gets its own scrolling.
+    The resume does NOT.
+  */
+
+  height: calc(100vh + 270px);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-right: 12px;
+  padding-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c4bcb2 transparent;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #c4bcb2;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #aaa198;
+}
+
+
+/* =========================================
+   RESUME COLUMN
+   ========================================= */
+
+.app > :last-child {
+  width: 794px;
+  min-width: 794px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* =========================================
+   RESUME WRAPPER
+   ========================================= */
+
+.resume-wrapper {
+  width: 794px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  /*
+    IMPORTANT:
+    No overflow here.
+    The resume should NOT have its own scrollbar.
+  */
+
+  overflow: visible;
+
+  padding-bottom: 20px;
+}
+
+
+/* =========================================
+   DOWNLOAD AREA
+   ========================================= */
+
+.resume-download-area {
+  width: 794px;
+
+  height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+   ========================================= */
+
+@media (max-width: 1350px) {
+
+  .app {
+    grid-template-columns: 390px 794px;
+
+    gap: 30px;
+
+    justify-content: center;
+  }
+
+  .sidebar {
+    width: 390px;
+  }
+}
+
+
+/* =========================================
+   SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+  .app {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 25px 20px 50px;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+
+    overflow: visible;
+
+    padding: 0;
+
+    order: 1;
+  }
+
+  .app > :last-child {
+    width: 100%;
+    min-width: 0;
+
+    order: 2;
+
+    align-items: flex-start;
+  }
+
+  .resume-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    justify-content: flex-start;
+  }
+
+  .resume-download-area {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  body > #root > h1 {
+    padding: 22px 18px;
+
+    font-size: 29px;
+  }
+
+  .app {
+    padding: 20px 15px 40px;
+  }
+}
