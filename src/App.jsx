@@ -20,7 +20,12 @@ function App() {
 
   return (
     <>
-      <h1>MakeMy<span style={{color: "#b56b45", textDecoration:"underline"}}>CV</span></h1>
+      <div className='header' style={{display: 'flex', justifyContent: 'space-between', alignItems:'center'}}>
+        <h1>MakeMy<span style={{color: "#b56b45", textDecoration:"underline"}}>CV</span></h1>
+        <button style={{backgroundColor: "#b56b45", color:"white", padding:"10px 20px", border: "none", cursor:"pointer"}} 
+          onClick={() => window.print()}
+        >Download CV</button>
+      </div>
 
       <div className='app'>
         <div className="sidebar">

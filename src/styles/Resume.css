@@ -160,30 +160,22 @@
   margin: 0;
 }
 
-@media print {
 
-  body {
-    margin: 0;
-    background: white;
+@media print {
+  body * {
+    visibility: hidden;
   }
 
-  .resume-wrapper {
-    display: block;
-    padding: 0;
-    overflow: visible;
+  .resume,
+  .resume * {
+    visibility: visible;
   }
 
   .resume {
-    width: 210mm;
-    height: 297mm;
-    min-width: 210mm;
-    min-height: 297mm;
-    padding: 16mm 17mm;
-    box-shadow: none;
-    overflow: hidden;
-  }
-
-  .resume-download-area {
-    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
   }
 }

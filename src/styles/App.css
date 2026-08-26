@@ -20,12 +20,12 @@ body {
 
 /* ================= PAGE HEADER ======================= */
 
-body > #root > h1 {
+body > #root > .header {
   position: relative;
   margin: 0;
-  padding: 25px 5vw 22px;
+  padding: 20px 140px;
   font-family: "Playfair Display", serif;
-  font-size: 34px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: -1px;
   color: #171717;
