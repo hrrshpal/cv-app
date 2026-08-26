@@ -1,62 +1,35 @@
-/* =========================================
-   GENERAL INFORMATION
-   ========================================= */
-
 .general-section {
     width: 100%;
 }
 
 .general-section h2 {
     margin: 8px 0 12px;
-
     font-size: 19px;
     font-weight: 700;
     letter-spacing: -0.3px;
-
     color: #242424;
 }
 
-
-/* =========================================
-   CARD
-   ========================================= */
-
 .general-card {
     padding: 18px;
-
     background: #f8f6f2;
-
     border: 1px solid #d8d3cb;
     border-radius: 6px;
-
-    box-shadow:
-        0 3px 10px rgba(40, 35, 30, 0.04);
+    box-shadow: 0 3px 10px rgba(40, 35, 30, 0.04);
 }
-
-
-/* =========================================
-   INPUTS
-   ========================================= */
 
 .general-card input,
 .general-card textarea {
     width: 100%;
-
     padding: 11px 12px;
-
     margin-bottom: 10px;
-
     font-family: "DM Sans", sans-serif;
     font-size: 14px;
-
     color: #252525;
     background: #fffdf9;
-
     border: 1px solid #d6d0c8;
     border-radius: 4px;
-
     outline: none;
-
     transition:
         border-color 0.15s ease,
         box-shadow 0.15s ease,
@@ -71,79 +44,41 @@
 .general-card input:focus,
 .general-card textarea:focus {
     background: #ffffff;
-
     border-color: #b56b45;
-
-    box-shadow:
-        0 0 0 3px rgba(181, 107, 69, 0.09);
+    box-shadow: 0 0 0 3px rgba(181, 107, 69, 0.09);
 }
-
-
-/* =========================================
-   DISABLED
-   ========================================= */
 
 .general-card input:disabled,
 .general-card textarea:disabled {
     color: #55514c;
-
     background: #eeeae4;
-
     border-color: #ddd7cf;
 }
 
-
-/* =========================================
-   LOCATION
-   ========================================= */
-
 .location-row {
     display: grid;
-
     grid-template-columns: 1fr 110px;
-
     gap: 10px;
 }
 
-
-/* =========================================
-   SUMMARY
-   ========================================= */
-
 .general-card textarea {
     min-height: 110px;
-
     resize: vertical;
-
     line-height: 1.5;
-
     margin-bottom: 0;
 }
 
-
-/* =========================================
-   BUTTON
-   ========================================= */
-
 .general-button {
     margin-top: 12px;
-
     padding: 10px 16px;
-
     font-family: "DM Sans", sans-serif;
-
     font-size: 13px;
     font-weight: 600;
-
     color: #ffffff;
-
     background: #b56b45;
-
     border: 1px solid #b56b45;
     border-radius: 4px;
-
     cursor: pointer;
-
     transition:
         background 0.15s ease,
         box-shadow 0.15s ease,
@@ -152,11 +87,8 @@
 
 .general-button:hover {
     background: #9e5937;
-
     border-color: #9e5937;
-
-    box-shadow:
-        0 3px 8px rgba(181, 107, 69, 0.18);
+    box-shadow: 0 3px 8px rgba(181, 107, 69, 0.18);
 }
 
 .general-button:active {
@@ -164,9 +96,7 @@
 }
 
 
-/* =========================================
-   MOBILE
-   ========================================= */
+/* =============MOBILE====================== */
 
 @media (max-width: 500px) {
 
