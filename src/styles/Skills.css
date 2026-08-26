@@ -73,6 +73,24 @@
     transform: translateY(1px);
 }
 
+.skill-dlt-button {
+    color: #55514c;
+    background: transparent;
+    border: 1px solid #c9c2b9;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.skill-dlt-button:hover {
+    background: #e8e2da;
+    border-color: #aaa198;
+}
+
+.skill-add-button:active,
+.skill-dlt-button:active {
+    transform: translateY(1px);
+}
+
 .skill-list {
     display: flex;
     flex-wrap: wrap;
@@ -89,6 +107,7 @@
     border: 1px solid #d8d0c6;
     border-radius: 3px;
 }
+
 
 /* ================MOBILE=================== */
 

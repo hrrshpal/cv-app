@@ -19,6 +19,16 @@ const Skills = ({skills, setSkills, skillset, setSkillset}) => {
                     <input onChange={addCurrentSkill} className="skillInput" type="text" placeholder="e.g. React" />
                     <button className="skill-add-button" onClick={addSkill}>Add</button>
                 </div>
+                <div className='skillset'>
+                    <div className='skill-list'>
+                    {skillset.map((item, index) => (
+                        <div key={index}>{item} <button className='skill-dlt-button' onClick={()=>{
+                            setSkillset(skillset.filter((val) => val!==item))
+                        }}>Delete Skill</button></div>
+                    ))}
+                    {console.log(skillset)}
+                    </div>
+                </div>
             </div>
         </section>
     )

@@ -17,7 +17,7 @@ const EducationalExperience = ({educationList, setEducationList, educationInfo, 
     }
 
     function deleteEducation() {
-        if (educationList.length > 1) {
+        if (educationList.length >= 1) {
             setEducationList(prev => prev.slice(0, -1))
             setEducationInfo(prev => prev.slice(0, -1))
         }

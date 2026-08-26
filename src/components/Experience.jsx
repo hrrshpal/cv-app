@@ -18,7 +18,7 @@ const Experience = ({ experienceList, setExperienceList, experienceInfo, setExpe
 
 
     function deleteExperience() {
-        if (experienceList.length > 1) {
+        if (experienceList.length >= 1) {
             setExperienceList(prev => prev.slice(0, -1))
             setExperienceInfo(prev => prev.slice(0, -1))
         }
