@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Resume.css'
 
-const Resume = ({info, educationList, experienceList, currentSkill, experienceInfo}) => {
+const Resume = ({info, educationInfo, experienceInfo}) => {
   return (
     <div className="resume-wrapper">
 
@@ -70,27 +70,29 @@ const Resume = ({info, educationList, experienceList, currentSkill, experienceIn
         <section className="resume-section">
           <h2>Education</h2>
 
-          <div className="resume-entry">
-            <div className="entry-heading">
-              <div>
-                <h3>Master of Computer Applications</h3>
-                <p className="entry-company">
-                  University / Institution
-                </p>
-              </div>
+          {educationInfo.map((education)=>{
+            return (
+              <div key={education.id} className="resume-entry">
+                <div className="entry-heading">
+                  <div>
+                    {education.degree ? <h3>{education.degree}</h3> : <h3>Master of Computer Applications</h3>}
+                    {education.school ? <p className="entry-company">{education.school}</p> : <p className="entry-company"> University / Institution</p>}
+                  </div>
 
-              <div className="entry-date">
-                2023 — 2026
-              </div>
+                  {(education.startdate || education.enddate) ? 
+                    <div className="entry-date"> {education.startdate} — {education.enddate}</div> :
+                    <div className="entry-date"> 2026-01-10 — 2026-08-20</div>}  
+                </div>
+
+                {education.city ? <p className="entry-location">{education.city}</p> : <p className="entry-location">New Delhi, India</p>}
+                
+                {education.description ?
+                <p className="entry-description"> {education.description}</p> :
+                <p className="entry-description"> Coursework focused on software development, databases, data structures and web technologies.</p>
+                }
             </div>
-
-            <p className="entry-location">New Delhi, India</p>
-
-            <p className="entry-description">
-              Coursework focused on software development, databases,
-              data structures and web technologies.
-            </p>
-          </div>
+            )
+          })}
 
         </section>
 

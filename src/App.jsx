@@ -12,6 +12,7 @@ function App() {
   const [info, setInfo] = useState({ name: "", email: "", phone: "", address: "", city: "", zipcode: "", summary: "" })
   const [experienceInfo, setExperienceInfo] = useState([{ id: crypto.randomUUID(), jobtitle: '', employer: '', city: '', startdate: '', enddate: '', description: ''}])
   const [experienceList, setExperienceList] = useState([1]);
+  const [educationInfo, setEducationInfo] = useState([{ id: crypto.randomUUID(), degree: '', school: '', city: '', startdate: '', enddate: '', description: ''}])
   const [educationList, setEducationList] = useState([1]);
   const [currentSkill, setCurrentSkill] = useState('')
   const [skill, setSkill] = useState('')
@@ -25,11 +26,11 @@ function App() {
         <div className="sidebar">
           <GeneralInformation info = {info} setInfo = {setInfo} />
           <Experience experienceList = {experienceList} setExperienceList={setExperienceList} experienceInfo={experienceInfo} setExperienceInfo={setExperienceInfo}/>
-          <EducationalExperience educationList = {educationList} setEducationList = {setEducationList} />
+          <EducationalExperience educationList = {educationList} setEducationList = {setEducationList} educationInfo={educationInfo} setEducationInfo={setEducationInfo} />
           <Skills skill={skill} setSkill={setSkill} currentSkill = {currentSkill} setCurrentSkill = {setCurrentSkill} />
         </div>
 
-        <Resume info={info} educationList={educationList} experienceList={experienceList} currentSkill={currentSkill} experienceInfo={experienceInfo}/>
+        <Resume info={info} educationInfo={educationInfo} experienceInfo={experienceInfo}/>
       </div>
     </>
   )
