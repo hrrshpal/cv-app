@@ -14,8 +14,8 @@ function App() {
   const [experienceList, setExperienceList] = useState([1]);
   const [educationInfo, setEducationInfo] = useState([{ id: crypto.randomUUID(), degree: '', school: '', city: '', startdate: '', enddate: '', description: ''}])
   const [educationList, setEducationList] = useState([1]);
-  const [currentSkill, setCurrentSkill] = useState('')
-  const [skill, setSkill] = useState('')
+  const [skills, setSkills] = useState('')
+  const [skillset, setSkillset] = useState([])
     
 
   return (
@@ -27,10 +27,10 @@ function App() {
           <GeneralInformation info = {info} setInfo = {setInfo} />
           <Experience experienceList = {experienceList} setExperienceList={setExperienceList} experienceInfo={experienceInfo} setExperienceInfo={setExperienceInfo}/>
           <EducationalExperience educationList = {educationList} setEducationList = {setEducationList} educationInfo={educationInfo} setEducationInfo={setEducationInfo} />
-          <Skills skill={skill} setSkill={setSkill} currentSkill = {currentSkill} setCurrentSkill = {setCurrentSkill} />
+          <Skills skills={skills} setSkills={setSkills} skillset={skillset} setSkillset = {setSkillset} />
         </div>
 
-        <Resume info={info} educationInfo={educationInfo} experienceInfo={experienceInfo}/>
+        <Resume info={info} educationInfo={educationInfo} experienceInfo={experienceInfo} skillset={skillset} />
       </div>
     </>
   )

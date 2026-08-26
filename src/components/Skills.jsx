@@ -1,57 +1,23 @@
 import React, { useState } from 'react'
 import '../styles/Skills.css'
 
-const Skills = ({skill,setSKill, currentSkill, setCurrentSkill }) => {
+const Skills = ({skills, setSkills, skillset, setSkillset}) => {
 
     function addCurrentSkill(e) {
-        setCurrentSkill(e.target.value)
+        setSkills(e.target.value)
     }
 
     function addSkill() {
-
-        if (!currentSkill.trim()) return
-
-        setSkill([
-            ...skill,
-            currentSkill.trim()
-        ])
-
-        setCurrentSkill('')
+        setSkillset([...skillset, skills])
     }
 
     return (
         <section className="skills-section">
-
             <h2>Skills</h2>
-
             <div className="skills-card">
-
                 <div className="skill-input-row">
-
-                    <input
-                        value={currentSkill}
-                        onChange={addCurrentSkill}
-                        className="skillInput"
-                        type="text"
-                        placeholder="e.g. React"
-                    />
-
-                    <button
-                        className="skill-add-button"
-                        onClick={addSkill}
-                    >
-                        Add
-                    </button>
-
-                </div>
-
-                <div className="skill-list">
-
-                    {/* {skill.map((item, index) => (
-                        <span className="skill-tag" key={index}>
-                            {item}
-                        </span>
-                    ))} */}
+                    <input onChange={addCurrentSkill} className="skillInput" type="text" placeholder="e.g. React" />
+                    <button className="skill-add-button" onClick={addSkill}>Add</button>
                 </div>
             </div>
         </section>
