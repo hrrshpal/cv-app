@@ -26,7 +26,6 @@ const Skills = ({skills, setSkills, skillset, setSkillset}) => {
                             setSkillset(skillset.filter((val) => val!==item))
                         }}>Delete Skill</button></div>
                     ))}
-                    {console.log(skillset)}
                     </div>
                 </div>
             </div>
