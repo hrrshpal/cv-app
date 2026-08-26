@@ -1,28 +1,61 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import '../styles/Skills.css'
 
-const Skills = () => {
+const Skills = ({skill,setSKill, currentSkill, setCurrentSkill }) => {
 
-    const[currentSkill, setCurrentSkill] = useState('')
-    const[skill, setSkill] = useState([])
-
-
-    function addCurrentSkill(e){
+    function addCurrentSkill(e) {
         setCurrentSkill(e.target.value)
     }
 
-    function addSkill(){
-        setSkill([...skill, currentSkill])
+    function addSkill() {
+
+        if (!currentSkill.trim()) return
+
+        setSkill([
+            ...skill,
+            currentSkill.trim()
+        ])
+
+        setCurrentSkill('')
     }
 
-    console.log(skill)
+    return (
+        <section className="skills-section">
 
-  return (
-    <div>
-        <h2>Skills</h2>
-        <input onChange={addCurrentSkill} className='skillInput' type="text" placeholder='Skills: e.g. React' />
-        <button onClick={addSkill}>Add More (+)</button>
-    </div>
-  )
+            <h2>Skills</h2>
+
+            <div className="skills-card">
+
+                <div className="skill-input-row">
+
+                    <input
+                        value={currentSkill}
+                        onChange={addCurrentSkill}
+                        className="skillInput"
+                        type="text"
+                        placeholder="e.g. React"
+                    />
+
+                    <button
+                        className="skill-add-button"
+                        onClick={addSkill}
+                    >
+                        Add
+                    </button>
+
+                </div>
+
+                <div className="skill-list">
+
+                    {/* {skill.map((item, index) => (
+                        <span className="skill-tag" key={index}>
+                            {item}
+                        </span>
+                    ))} */}
+                </div>
+            </div>
+        </section>
+    )
 }
 
 export default Skills

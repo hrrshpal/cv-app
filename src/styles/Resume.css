@@ -1,117 +1,65 @@
-/* =========================================
-   RESUME AREA
-   ========================================= */
-
 .resume-wrapper {
   width: 100%;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
   overflow: auto;
-
   padding: 0 0 20px;
 }
 
-
-/* =========================================
-   ACTUAL A4 PAPER
-   ========================================= */
-
 .resume {
-  /*
-    REAL A4 DIMENSIONS
-  */
   width: 210mm;
   min-width: 210mm;
-
   height: 297mm;
   min-height: 297mm;
-
   flex-shrink: 0;
-
   padding: 16mm 17mm;
-
   background: #ffffff;
-
   color: #252525;
-
-  box-shadow:
-    0 10px 30px rgba(45, 40, 35, 0.15);
-
+  box-shadow: 0 10px 30px rgba(45, 40, 35, 0.15);
   font-family: "DM Sans", Arial, sans-serif;
-
   overflow: hidden;
 }
-
-
-/* =========================================
-   HEADER
-   ========================================= */
 
 .resume-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   padding-bottom: 7mm;
-
   border-bottom: 0.6mm solid #252525;
 }
 
 .resume-name {
   margin: 0;
-
   font-family: "Playfair Display", Georgia, serif;
-
   font-size: 30pt;
   font-weight: 700;
-
   line-height: 1;
-
   letter-spacing: -0.8px;
-
   color: #171717;
 }
 
 .resume-role {
   margin: 3mm 0 0;
-
   font-size: 9pt;
   font-weight: 600;
-
   letter-spacing: 1.2px;
   text-transform: uppercase;
-
   color: #b56b45;
 }
 
-
-/* =========================================
-   CONTACT
-   ========================================= */
-
 .resume-contact {
   text-align: right;
-
   padding-top: 1mm;
 }
 
 .resume-contact p {
   margin: 0 0 1.2mm;
-
   font-size: 8pt;
   line-height: 1.35;
-
   color: #66615b;
 }
-
-
-/* =========================================
-   SECTIONS
-   ========================================= */
 
 .resume-section {
   margin-top: 7mm;
@@ -119,34 +67,19 @@
 
 .resume-section h2 {
   margin: 0 0 3.5mm;
-
   font-size: 8.5pt;
   font-weight: 700;
-
   letter-spacing: 1.5px;
   text-transform: uppercase;
-
   color: #b56b45;
 }
 
-
-/* =========================================
-   PROFILE
-   ========================================= */
-
 .resume-summary {
   margin: 0;
-
   font-size: 8.5pt;
   line-height: 1.55;
-
   color: #4b4844;
 }
-
-
-/* =========================================
-   EXPERIENCE / EDUCATION
-   ========================================= */
 
 .resume-entry {
   margin-bottom: 5mm;
@@ -156,62 +89,44 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   gap: 10mm;
 }
 
 .entry-heading h3 {
   margin: 0;
-
   font-size: 10.5pt;
   font-weight: 700;
-
   color: #252525;
 }
 
 .entry-company {
   margin: 1mm 0 0;
-
   font-size: 8.5pt;
   font-weight: 600;
-
   color: #55514c;
 }
 
 .entry-date {
   flex-shrink: 0;
-
   padding-top: 0.5mm;
-
   font-size: 7.5pt;
   font-weight: 500;
-
   color: #77716a;
-
   white-space: nowrap;
 }
 
 .entry-location {
   margin: 1mm 0 2mm;
-
   font-size: 7.5pt;
-
   color: #8a837b;
 }
 
 .entry-description {
   margin: 0;
-
   font-size: 8.2pt;
   line-height: 1.55;
-
   color: #55514d;
 }
-
-
-/* =========================================
-   SKILLS
-   ========================================= */
 
 .skills-section {
   margin-top: 7mm;
@@ -225,36 +140,20 @@
 
 .resume-skills span {
   padding: 1.5mm 3mm;
-
   font-size: 7.5pt;
   font-weight: 500;
-
   color: #4a4641;
-
   background: #f1eee9;
-
   border: 0.3mm solid #dfd9d1;
 }
 
-
-/* =========================================
-   DOWNLOAD AREA
-   ========================================= */
-
 .resume-download-area {
   width: 100%;
-
   min-height: 65px;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
-/* =========================================
-   PRINT — ACTUAL A4
-   ========================================= */
 
 @page {
   size: A4;
@@ -279,11 +178,8 @@
     height: 297mm;
     min-width: 210mm;
     min-height: 297mm;
-
     padding: 16mm 17mm;
-
     box-shadow: none;
-
     overflow: hidden;
   }
 

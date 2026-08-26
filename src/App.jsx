@@ -11,15 +11,15 @@ function App() {
 
   const [info, setInfo] = useState({ name: "", email: "", phone: "", address: "", city: "", zipcode: "", summary: "" })
   const [experienceInfo, setExperienceInfo] = useState([{ id: crypto.randomUUID(), jobtitle: '', employer: '', city: '', startdate: '', enddate: '', description: ''}])
-  const [educationList, setEducationList] = useState([1]);
   const [experienceList, setExperienceList] = useState([1]);
+  const [educationList, setEducationList] = useState([1]);
   const [currentSkill, setCurrentSkill] = useState('')
   const [skill, setSkill] = useState('')
     
 
   return (
     <>
-      <h1>CV Builder</h1>
+      <h1>MakeMy<span style={{color: "#b56b45", textDecoration:"underline"}}>CV</span></h1>
 
       <div className='app'>
         <div className="sidebar">
