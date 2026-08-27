@@ -1,16 +1,59 @@
-# React + Vite
+# MakeMyCV
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive **CV/Resume Builder** built with React. MakeMyCV allows users to enter their personal information, education, work experience, and skills, and instantly generates a professional-looking resume that can be printed or saved as a PDF.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Add and edit personal information
+* Add multiple work experiences
+* Add multiple educational qualifications
+* Add and remove skills dynamically
+* Live resume preview
+* Clean and responsive user interface
+* Print/download resume as PDF
+* Automatically updates the resume as you enter information
 
-## React Compiler
+## 🛠️ Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React.js
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* Vite
 
-## Expanding the ESLint configuration
+## 📸 How It Works
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Enter your personal details.
+2. Add your education details.
+3. Add your work experience.
+4. Add your skills.
+5. View your resume live as it updates.
+6. Click the download/print button to save your CV as a PDF.
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/makemycv.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd makemycv
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Built as part of my journey to learn React and modern frontend development.
